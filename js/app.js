@@ -71,7 +71,7 @@ function gerarLista() {
 
 function definirDanos() {
     if (gustavoolAuxiliares.includes("Denilson") == true) {
-        if (document.getElementById("Denilson").checked != true) {
+        if (document.getElementById("Denilson").checked == true) {
             denilsonDado = rolagem(20)+9;
         console.log(`Denilson - Resultado: ${denilsonDado}`);
         if (denilsonDado >= dt) {
@@ -84,7 +84,7 @@ function definirDanos() {
         } 
     }
     if (gustavoolAuxiliares.includes("Joaquim") == true) {
-        if (document.getElementById("Joaquim").checked != true) {
+        if (document.getElementById("Joaquim").checked == true) {
         joaquimDado = rolagem(20)+6;
         console.log(`Joaquim - Resultado: ${joaquimDado}`);
         if (joaquimDado >= dt) {
@@ -97,7 +97,7 @@ function definirDanos() {
     }
     }
     if (ivanAuxiliares.includes("Braid") == true) {
-        if (document.getElementById("Braid").checked != true) {
+        if (document.getElementById("Braid").checked == true) {
         braidDado = rolagem(20)+4;
         console.log(`Braid - Resultado: ${braidDado}`);
         if (braidDado >= dt) {
@@ -110,7 +110,7 @@ function definirDanos() {
     }
     }
     if (ivanAuxiliares.includes("Alexandrino") == true) {
-        if (document.getElementById("Alexandrino").checked != true) {
+        if (document.getElementById("Alexandrino").checked == true) {
         alexandrinoDado = rolagem(20)+4;
         console.log(`Alexandrino - Resultado: ${alexandrinoDado}`);
         if (alexandrinoDado >= dt) {
@@ -123,7 +123,7 @@ function definirDanos() {
     }
     }
     if (ivanAuxiliares.includes("Kaiba") == true) {
-        if (document.getElementById("Kaiba").checked != true) {
+        if (document.getElementById("Kaiba").checked == true) {
         kaibaDado = rolagem(20)+5;
         console.log(`Kaiba - Resultado: ${kaibaDado}`);
         if (kaibaDado >= dt) {
