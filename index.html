@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Auxiliares</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="parte-superior">
+        <div class="selecao">
+        <section>
+            <p>Gustavool</p>
+        <select id="gustavool" onclick="escolhaPrincipal()">
+            <option value="0">Denilson</option>
+            <option value="1">Joaquim</option>
+        </select>
+    </section>
+    <section>
+        <p>Ivan</p>
+        <select id="ivan" onclick="escolhaPrincipal()">
+            <option value="0">Braid</option>
+            <option value="1">Alexandrino</option>
+            <option value="2">Kaiba</option>
+        </select>
+    </section>
+</div>
+    <h3>Remover Auxiliares:</h3>
+    <div id="auxiliares">
+        <div id="divDenilson" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Denilson"><img src="assets/Denilson.png"> Denilson
+        </div>
+        <div id="divJoaquim" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Joaquim"><img src="assets/Joaquim.png"> Joaquim
+        </div>
+        <div id="divBraid" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Braid"><img src="assets/Braid.png"> Braid
+        </div>
+        <div id="divAlexandrino" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Alexandrino"><img src="assets/Alexandrino.png"> Alexandrino
+        </div>
+        <div id="divKaiba" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Kaiba"><img src="assets/Kaiba.png"> Kaiba
+        </div>
+    </div>
+<input type="number" id="dt" min="0" max="99">
+<button onclick="iniciarTeste()">Rolar</button>
+</div>
+<div class="parte-inferior">
+    <h4 id="soma-danos"></h4>
+    <h2 id="txtDanoTotal"></h2>
+    <h1 id="dano-total"></h1>
+</div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
