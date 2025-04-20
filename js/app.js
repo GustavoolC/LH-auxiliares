@@ -75,7 +75,7 @@ function definirDanos() {
             denilsonDado = rolagem(20)+9;
         console.log(`Denilson - Resultado: ${denilsonDado}`);
         if (denilsonDado >= dt) {
-            denilsonDano = rolagem(8)+rolagem(6)+2+rolagem(6);
+            denilsonDano = rolagem(2)+rolagem(10)+5;
         } else {
             denilsonDano = 0;
         }
