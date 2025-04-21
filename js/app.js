@@ -79,7 +79,7 @@ function definirDanos() {
         } else {
             denilsonDano = 0;
         }
-        listaDanos.push(`<img src="assets/Denilson.png">` + denilsonDano);
+        listaDanos.push(`<img src="assets/Denilson.png" title="Resultado: ` + denilsonDado + `"> ` + denilsonDano);
         console.log("-------------------------------");
         } 
     }
@@ -92,7 +92,7 @@ function definirDanos() {
         } else {
             joaquimDano = 0;
         }
-        listaDanos.push(`<img src="assets/Joaquim.png">` + joaquimDano);
+        listaDanos.push(`<img src="assets/Joaquim.png" title="Resultado: ` + joaquimDado + `"> ` + joaquimDano);
         console.log("-------------------------------");
     }
     }
@@ -105,7 +105,7 @@ function definirDanos() {
         } else {
             braidDano = 0;
         }
-        listaDanos.push(`<img src="assets/Braid.png">` + braidDano);
+        listaDanos.push(`<img src="assets/Braid.png" title="Resultado: ` + braidDado + `"> ` + braidDano);
         console.log("-------------------------------");
     }
     }
@@ -118,7 +118,7 @@ function definirDanos() {
         } else {
             alexandrinoDano = 0;
         }
-        listaDanos.push(`<img src="assets/Alexandrino.png">` + alexandrinoDano);
+        listaDanos.push(`<img src="assets/Alexandrino.png" title="Resultado: ` + alexandrinoDado + `"> ` + alexandrinoDano);
         console.log("-------------------------------");
     }
     }
@@ -131,7 +131,7 @@ function definirDanos() {
         } else {
             kaibaDano = 0;
         }
-        listaDanos.push(`<img src="assets/Kaiba.png">` + kaibaDano);
+        listaDanos.push(`<img src="assets/Kaiba.png" title="Resultado: ` + kaibaDado + `"> ` + kaibaDano);
         console.log("-------------------------------");
     }
     }
