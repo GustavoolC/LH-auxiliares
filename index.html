@@ -11,11 +11,19 @@
     <main>
         <div class="parte-superior">
         <div class="selecao">
+            <section>
+                <p>Armadillo</p>
+            <select id="armadillo" onclick="escolhaPrincipal()">
+                <option value="0">Firmino</option>
+                <option value="1">Wander</option>
+            </select>
+        </section>
         <section>
             <p>Gustavool</p>
         <select id="gustavool" onclick="escolhaPrincipal()">
             <option value="0">Denilson</option>
             <option value="1">Joaquim</option>
+            <option value="2">Capper</option>
         </select>
     </section>
     <section>
@@ -29,11 +37,20 @@
 </div>
     <h3>Auxiliares Ativos:</h3>
     <div id="auxiliares">
+        <div id="divFirmino" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Firmino" checked><img src="assets/Firmino.png" class="grandioso"> Firmino
+        </div>
+        <div id="divWander" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Wander" checked><img src="assets/Wander.png"> Wander
+        </div>
         <div id="divDenilson" class="">
             <input type="checkbox" class="listaAuxiliar" id="Denilson" checked><img src="assets/Denilson.png"> Denilson
         </div>
         <div id="divJoaquim" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Joaquim" checked><img src="assets/Joaquim.png"> Joaquim
+            <input type="checkbox" class="listaAuxiliar" id="Joaquim"><img src="assets/Joaquim.png"> Joaquim
+        </div>
+        <div id="divCapper" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Capper" checked><img src="assets/Capper.png"> Capper
         </div>
         <div id="divBraid" class="">
             <input type="checkbox" class="listaAuxiliar" id="Braid" checked><img src="assets/Braid.png"> Braid
