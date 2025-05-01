@@ -227,19 +227,20 @@ function definirDanos() {
         andromedusDado = rolagem(20)+3;
         if (andromedusDado >= dt) {
             andromedusDano = rolagem(8)+rolagem(8)+2+1;
+            andromedusDanoDefendido = andromedusDano - corte;
             andromedusDanoLuz = rolagem(6);
             andromedusDanoLuzDefendido = andromedusDanoLuz - luz;
             if (andromedusDanoLuzDefendido < 0) {
                 andromedusDanoLuzDefendido = 0;
             }
-            andromedusDanoFinal = andromedusDano + andromedusDanoLuzDefendido;
+            andromedusDanoFinal = andromedusDanoDefendido + andromedusDanoLuzDefendido;
         } else {
             andromedusDano = 0;
             andromedusDanoLuz = 0;
             andromedusDanoLuzDefendido = 0;
             andromedusDanoFinal = 0;
         }
-        listaDanos.push(`<img src="assets/Andromedus.png" title="Resultado: ` + andromedusDado + `, Dano: ` + andromedusDano + ` + (` + andromedusDanoLuz + ` - ` + luz + `)"> ` + andromedusDanoFinal);
+        listaDanos.push(`<img src="assets/Andromedus.png" title="Resultado: ` + andromedusDado + `, Dano: (` + andromedusDano + ` - ` + corte + `) + (` + andromedusDanoLuz + ` - ` + luz + `)"> ` + andromedusDanoFinal);
     }
     }
     if (jvictorAuxiliares.includes("Kandoru") == true) {
@@ -352,6 +353,7 @@ function resetarDanos() {
     miguelDano = 0;
     miguelDanoFinal = 0;
     andromedusDano = 0;
+    andromedusDanoDefendido = 0;
     andromedusDanoLuz = 0;
     andromedusDanoLuzDefendido = 0;
     andromedusDanoFinal = 0;
