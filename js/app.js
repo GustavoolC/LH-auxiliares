@@ -248,7 +248,7 @@ function definirDanos() {
         kandoruDado = rolagem(20)+7;
         if (kandoruDado >= dt) {
             kandoruDano = rolagem(6)+rolagem(6)+5;
-            kandoruDanoFinal = andromedusDano - corte;
+            kandoruDanoFinal = kandoruDano - corte;
             if (kandoruDanoFinal < 0) {
                 kandoruDanoFinal = 0;
             }
