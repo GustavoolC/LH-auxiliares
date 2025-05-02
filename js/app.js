@@ -114,7 +114,7 @@ function definirDanos() {
         if (document.getElementById("Firmino").checked == true) {
         firminoDado = rolagem(20)+11;
         if (firminoDado >= dt) {
-            firminoDano = rolagem(6)+4;
+            firminoDano = rolagem(6)+rolagem(10)+4;
             firminoDanoFinal = firminoDano - perfuracao;
             if (firminoDanoFinal < 0) {
                 firminoDanoFinal = 0;
@@ -123,7 +123,7 @@ function definirDanos() {
             firminoDano = 0;
             firminoDanoFinal = 0;
         }
-        listaDanos.push(`<img src="assets/Firmino.png" title="Resultado: ` + firminoDado + `, Dano: ` + firminoDano + ` - ` + perfuracao + `"> ` + firminoDanoFinal);
+        listaDanos.push(`<img src="assets/Firmino.png"  class="grandioso" title="Resultado: ` + firminoDado + `, Dano: ` + firminoDano + ` - ` + perfuracao + `"> ` + firminoDanoFinal);
     }
     }
     if (armadilloAuxiliares.includes("Wander") == true) {
@@ -224,7 +224,7 @@ function definirDanos() {
     }
     if (jvictorAuxiliares.includes("Andromedus") == true) {
         if (document.getElementById("Andromedus").checked == true) {
-        andromedusDado = rolagem(20)+3;
+        andromedusDado = rolagem(20)+6;
         if (andromedusDado >= dt) {
             andromedusDano = rolagem(8)+rolagem(8)+2+1;
             andromedusDanoDefendido = andromedusDano - corte;
@@ -245,10 +245,10 @@ function definirDanos() {
     }
     if (jvictorAuxiliares.includes("Kandoru") == true) {
         if (document.getElementById("Kandoru").checked == true) {
-        kandoruDado = rolagem(20);
+        kandoruDado = rolagem(20)+7;
         if (kandoruDado >= dt) {
-            kandoruDano = rolagem(0)-1;
-            kandoruDanoFinal = andromedusDano - 0;
+            kandoruDano = rolagem(6)+rolagem(6)+5;
+            kandoruDanoFinal = andromedusDano - corte;
             if (kandoruDanoFinal < 0) {
                 kandoruDanoFinal = 0;
             }
@@ -256,7 +256,7 @@ function definirDanos() {
             kandoruDano = 0;
             kandoruDanoFinal = 0;
         }
-        listaDanos.push(`<img src="assets/Kandoru.png" title="Resultado: ` + kandoruDado + `, Dano: ` + kandoruDano + ` - ` + `"> ` + kandoruDanoFinal);
+        listaDanos.push(`<img src="assets/Kandoru.png" title="Resultado: ` + kandoruDado + `, Dano: ` + kandoruDano + ` - ` + corte + `"> ` + kandoruDanoFinal);
     }
     }
     if (ivanAuxiliares.includes("Braid") == true) {
