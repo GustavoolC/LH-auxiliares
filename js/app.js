@@ -144,10 +144,10 @@ function definirDanos() {
     }
     if (armadilloAuxiliares.includes("Lee") == true) {
         if (document.getElementById("Lee").checked == true) {
-        leeDado = rolagem(20);
+        leeDado = rolagem(20)+7;
         if (leeDado >= dt) {
-            leeDano = rolagem(0)-1;
-            leeDanoFinal = leeDano - 0;
+            leeDano = rolagem(6)+rolagem(6);
+            leeDanoFinal = leeDano - balistico;
             if (leeDanoFinal < 0) {
                 leeDanoFinal = 0;
             }
@@ -155,7 +155,7 @@ function definirDanos() {
             leeDano = 0;
             leeDanoFinal = 0;
         }
-        listaDanos.push(`<img src="assets/Lee.png" title="Resultado: ` + leeDado + `, Dano: ` + leeDano + ` - ` + `"> ` + leeDanoFinal);
+        listaDanos.push(`<img src="assets/Lee.png" title="Resultado: ` + leeDado + `, Dano: ` + leeDano + ` - ` + balistico + `"> ` + leeDanoFinal);
     }
     }
     if (gustavoolAuxiliares.includes("Denilson") == true) {
@@ -226,7 +226,7 @@ function definirDanos() {
         if (document.getElementById("Andromedus").checked == true) {
         andromedusDado = rolagem(20)+6;
         if (andromedusDado >= dt) {
-            andromedusDano = rolagem(8)+rolagem(8)+2+1;
+            andromedusDano = rolagem(10)+rolagem(10)+2+1;
             andromedusDanoDefendido = andromedusDano - corte;
             andromedusDanoLuz = rolagem(6);
             andromedusDanoLuzDefendido = andromedusDanoLuz - luz;
@@ -310,6 +310,11 @@ function definirDanos() {
     }
     }
     somaDanos = listaDanos.join(" + ");
+}
+
+
+function alterarTema() {
+    document.getElementById("estilo").setAttribute("href",document.getElementById("tema").value);
 }
 
 function definirDefesas() {
