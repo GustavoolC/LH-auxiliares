@@ -146,7 +146,7 @@ function definirDanos() {
         if (document.getElementById("Lee").checked == true) {
         leeDado = rolagem(20)+7;
         if (leeDado >= dt) {
-            leeDano = rolagem(6)+rolagem(6);
+            leeDano = rolagem(6)+rolagem(6)+rolagem(6)+rolagem(6);
             leeDanoFinal = leeDano - balistico;
             if (leeDanoFinal < 0) {
                 leeDanoFinal = 0;
