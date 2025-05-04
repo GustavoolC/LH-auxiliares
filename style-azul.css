@@ -1,0 +1,406 @@
+@font-face {
+    font-family: "medieval";
+    src: url("fonts/MedievalTimes-Regular.otf");
+}
+
+* {
+    margin: 0px;
+    /* background-color: rgb(29, 28, 28); */
+    color: white;
+    font-size: 105%;
+    font-weight: 100;
+    font-family: "medieval";
+    text-shadow: 0px 0px 20px black;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(0, 21, 44), rgb(0, 0, 0));
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+#tema {
+    margin: 1%;
+    margin-left: 92%;
+}
+
+.parte-superior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-size: 200%;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.597);
+}
+
+.selecao {
+    margin-top: -0.6%;
+    gap: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+select {
+    font-size: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(0, 5, 17);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.619);
+}
+
+h3 {
+    margin-top: 1%;
+    color: rgb(210, 185, 228);
+}
+
+#todos-auxiliares {
+    display: flex;
+}
+
+#auxiliares {
+    display: flex;
+    flex-direction: column;
+}
+
+.listaAuxiliar {
+    margin: 5px;
+    width: 18px;
+    height: 18px;
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+
+.secreto {
+    display: none;
+}
+
+input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    margin-top: 1%;
+    text-align: center;
+    background-color: rgb(0, 5, 17);
+    accent-color: rgb(0, 98, 255);
+}
+
+.grandioso {
+    width: 20px;
+}
+
+.dt {
+    font-size: 200%;
+    margin-top: 2%;
+    padding: 0.2%;
+    border-radius: 20px;
+    color:rgb(0, 98, 255);
+    text-shadow: 0px 0px 20px rgb(0, 98, 255);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0px 0px 20px black;
+}
+
+.lista-defesas {
+    display: flex;
+    justify-content: row;
+    text-align: center;
+    gap: 20px;
+}
+
+.lista-defesas-2 {
+    display: flex;
+    justify-content: row;
+    text-align: center;
+    gap: 10px;
+}
+
+.defesas-2 {
+    margin-top: 5%;
+}
+
+.defesas {
+    margin-top: 1%;
+}
+
+.campo-defesa {
+    width: 50%;
+    font-size: 140%;
+    padding: 0%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.txt-fisico {
+    color:rgb(213, 213, 213);
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+
+.fisico {
+    color:rgb(255, 255, 255);
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+
+#txt-chamas {
+    color:rgb(203, 91, 0);
+    text-shadow: 0px 0px 20px rgb(255, 115, 0);
+}
+
+#chamas {
+    color:rgb(205, 159, 124);
+    text-shadow: 0px 0px 20px rgb(255, 115, 0);
+}
+
+#txt-quimico {
+    color:rgb(28, 166, 0);
+    text-shadow: 0px 0px 20px rgb(51, 255, 0);
+}
+
+#quimico {
+    color:rgb(132, 195, 114);
+    text-shadow: 0px 0px 20px rgb(68, 255, 0);
+}
+
+#txt-eletricidade {
+    color:rgb(166, 166, 0);
+    text-shadow: 0px 0px 20px rgb(255, 242, 0);
+}
+
+#eletricidade {
+    color:rgb(195, 192, 114);
+    text-shadow: 0px 0px 20px rgb(251, 255, 0);
+}
+
+#txt-terra {
+    color: #32b172;
+    text-shadow: 0px 0px 20px #00ff80;
+}
+
+#terra {
+    color:#91dcb6;
+    text-shadow: 0px 0px 20px #00ff80;
+}
+
+#txt-fogo {
+    color: #ffa100;
+    text-shadow: 0px 0px 20px #ffa100;
+}
+
+#fogo {
+    color:#ffd791;
+    text-shadow: 0px 0px 20px #ffa100;
+}
+
+#txt-agua {
+    color: #0062ff;
+    text-shadow: 0px 0px 20px #0062ff;
+}
+
+#agua {
+    color: #96beff;
+    text-shadow: 0px 0px 20px #0062ff;
+}
+
+#txt-ondas {
+    color: #cccccc;
+    text-shadow: 0px 0px 20px #ffffff;
+}
+
+#ondas {
+    color:#ffffff;
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+
+#txt-energia {
+    color: #f3ff00;
+    text-shadow: 0px 0px 20px #f3ff00;
+}
+
+#energia {
+    color:#faffa1;
+    text-shadow: 0px 0px 20px #f3ff00;
+}
+
+#txt-luz {
+    color: #fdffb2;
+    text-shadow: 0px 0px 20px #fdffb2;
+}
+
+#luz {
+    color: #fdffce;
+    text-shadow: 0px 0px 20px #fdffb2;
+}
+
+#txt-trevas {
+    color: #501f9c;
+    text-shadow: 0px 0px 20px #a66bff;
+}
+
+#trevas {
+    color:#846ca8;
+    text-shadow: 0px 0px 20px #6600ff;
+}
+
+#txt-conhecimento {
+    color: #ffd500;
+    text-shadow: 0px 0px 20px #ffd500;
+}
+
+#conhecimento {
+    color:#fff0a3;
+    text-shadow: 0px 0px 20px #ffd500;
+}
+
+#txt-caos-1 {
+    color: #fe0000;
+    text-shadow: 0px 0px 20px #fe0000;;
+}
+
+#txt-caos-2 {
+    color: #7f00ff;
+    text-shadow: 0px 0px 20px #7f00ff;
+}
+
+#caos {
+    color: #6c49c3;
+    text-shadow: 0px 0px 20px #6c49c3;
+}
+
+#txt-sangue {
+    color: #fe3521;
+    text-shadow: 0px 0px 20px #fe3521;
+}
+
+#sangue {
+    color: #ffa8a0;
+    text-shadow: 0px 0px 20px #fe3521;
+}
+
+#txt-alma {
+    color: #ffffff;
+    text-shadow: 0px 0px 20px #ffffff;
+}
+
+#alma {
+    color: #ffffff;
+    text-shadow: 0px 0px 20px #ffffff;
+}
+
+#txt-vazio {
+    color: #6f6f6f;
+    text-shadow: 0px 0px 20px #676767;
+}
+
+#vazio {
+    color: #b1b1b1;
+    text-shadow: 0px 0px 20px #cdcdcd;
+}
+
+#txt-radiacao {
+    color: #00ff00;
+    text-shadow: 0px 0px 20px #00ff00;
+}
+
+#radiacao {
+    color: #a6ffa6;
+    text-shadow: 0px 0px 20px #00ff00;
+}
+
+#txt-devaneio {
+    color: #592375;
+    text-shadow: 0px 0px 20px #591a79;
+}
+
+#devaneio {
+    color: #9d7bad;
+    text-shadow: 0px 0px 20px #5d1b7e;
+}
+
+#txt-eco {
+    color: #0059d8;
+    text-shadow: -3px 3px 2px #9b22c4;
+}
+
+#eco {
+    color: #ff9eff;
+    text-shadow: 0px 0px 20px #ff00ff;
+}
+
+#txt-fe-1 {
+    color: #d4dc18;
+    text-shadow: 0px 0px 20px #f6ff00;
+}
+
+#txt-fe-2 {
+    color: #5c6c00;
+    text-shadow: 0px 0px 20px #849b00;
+}
+
+#fe {
+    color: #e9ec93;
+    text-shadow: 0px 0px 20px #f6ff00;
+}
+
+#txt-sigilo {
+    color: #070795;
+    text-shadow: 0px 0px 20px #0000aa;
+}
+
+#sigilo {
+    color: #7f7fd6;
+    text-shadow: 0px 0px 20px #0000aa;
+}
+
+button {
+    font-size: 130%;
+    padding: 0.5%;
+    border-radius: 20px;
+    margin-top: 1.5%;
+    background-color: rgb(24, 33, 51);
+    border-color: rgb(0, 98, 255);
+    box-shadow: 0px 0px 30px black;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.parte-inferior {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4 {
+    font-size: 110%;
+}
+
+h2 {
+    font-size: 150%;
+    color: rgb(210, 185, 228);
+}
+
+h1 {
+    font-size: 300%;
+    color:#ffffff;
+    text-shadow: 0px 0px 10px rgb(0, 98, 255);
+}
