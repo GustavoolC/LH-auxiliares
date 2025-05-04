@@ -25,8 +25,6 @@ html {
 #tema {
     margin: 1%;
     margin-left: 92%;
-    background-color: rgb(133, 102, 151);
-    text-shadow: 0px 0px 20px transparent;
 }
 
 #tema-trevas {
@@ -76,7 +74,7 @@ select {
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    background-color: rgb(17, 14, 0);
+    background-color: rgb(12, 0, 17);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.619);
 }
 

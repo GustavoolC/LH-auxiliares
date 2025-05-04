@@ -26,6 +26,22 @@ html {
     margin-left: 92%;
 }
 
+#tema-trevas {
+    background-color: rgb(133, 102, 151);
+}
+
+#tema-roxo {
+    background-color: rgb(29, 0, 44);
+}
+
+#tema-azul {
+    background-color: rgb(0, 21, 44);
+}
+
+#tema-vermelho {
+    background-color: rgb(44, 0, 0);
+}
+
 .parte-superior {
     display: flex;
     flex-direction: column;
