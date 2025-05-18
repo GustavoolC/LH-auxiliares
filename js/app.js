@@ -1,5 +1,7 @@
 let dt;
 let listaAuxiliares;
+let pagina = 1;
+let primeiro = 1
 escolhaPrincipal();
 
 function iniciarTeste() {
@@ -110,38 +112,38 @@ function gerarLista() {
 }
 
 function definirDanos() {
-    if (armadilloAuxiliares.includes("Firmino") == true) {
-        if (document.getElementById("Firmino").checked == true) {
-        firminoDado = rolagem(20)+11;
-        if (firminoDado >= dt) {
-            firminoDano = rolagem(6)+rolagem(10)+4;
-            firminoDanoFinal = firminoDano - perfuracao;
-            if (firminoDanoFinal < 0) {
-                firminoDanoFinal = 0;
-            }
-        } else {
-            firminoDano = 0;
-            firminoDanoFinal = 0;
-        }
-        listaDanos.push(`<img src="assets/Firmino.png"  class="grandioso" title="Resultado: ` + firminoDado + `, Dano: ` + firminoDano + ` - ` + perfuracao + `"> ` + firminoDanoFinal);
-    }
-    }
-    if (armadilloAuxiliares.includes("Wander") == true) {
-        if (document.getElementById("Wander").checked == true) {
-        wanderDado = rolagem(20)+7;
-        if (wanderDado >= dt) {
-            wanderDano = rolagem(4)+rolagem(4);
-            wanderDanoFinal = wanderDano - balistico;
-            if (wanderDanoFinal < 0) {
-                wanderDanoFinal = 0;
-            }
-        } else {
-            wanderDano = 0;
-            wanderDanoFinal = 0;
-        }
-        listaDanos.push(`<img src="assets/Wander.png" title="Resultado: ` + wanderDado + `, Dano: ` + wanderDano + ` - ` + balistico + `"> ` + wanderDanoFinal);
-    }
-    }
+    // if (armadilloAuxiliares.includes("Firmino") == true) {
+    //     if (document.getElementById("Firmino").checked == true) {
+    //     firminoDado = rolagem(20)+11;
+    //     if (firminoDado >= dt) {
+    //         firminoDano = rolagem(6)+rolagem(10)+4;
+    //         firminoDanoFinal = firminoDano - perfuracao;
+    //         if (firminoDanoFinal < 0) {
+    //             firminoDanoFinal = 0;
+    //         }
+    //     } else {
+    //         firminoDano = 0;
+    //         firminoDanoFinal = 0;
+    //     }
+    //     listaDanos.push(`<img src="assets/Firmino.png"  class="grandioso" title="Resultado: ` + firminoDado + `, Dano: ` + firminoDano + ` - ` + perfuracao + `"> ` + firminoDanoFinal);
+    // }
+    // }
+    // if (armadilloAuxiliares.includes("Wander") == true) {
+    //     if (document.getElementById("Wander").checked == true) {
+    //     wanderDado = rolagem(20)+7;
+    //     if (wanderDado >= dt) {
+    //         wanderDano = rolagem(4)+rolagem(4);
+    //         wanderDanoFinal = wanderDano - balistico;
+    //         if (wanderDanoFinal < 0) {
+    //             wanderDanoFinal = 0;
+    //         }
+    //     } else {
+    //         wanderDano = 0;
+    //         wanderDanoFinal = 0;
+    //     }
+    //     listaDanos.push(`<img src="assets/Wander.png" title="Resultado: ` + wanderDado + `, Dano: ` + wanderDano + ` - ` + balistico + `"> ` + wanderDanoFinal);
+    // }
+    // }
     if (armadilloAuxiliares.includes("Lee") == true) {
         if (document.getElementById("Lee").checked == true) {
         leeDado = rolagem(20)+7;
@@ -160,7 +162,7 @@ function definirDanos() {
     }
     if (gustavoolAuxiliares.includes("Denilson") == true) {
         if (document.getElementById("Denilson").checked == true) {
-            denilsonDado = rolagem(20)+9;
+            denilsonDado = rolagem(20)+11;
         if (denilsonDado >= dt) {
             denilsonDano = rolagem(2)+rolagem(10)+5;
             denilsonDanoFinal = denilsonDano - impacto;
@@ -176,7 +178,7 @@ function definirDanos() {
     }
     if (gustavoolAuxiliares.includes("Joaquim") == true) {
         if (document.getElementById("Joaquim").checked == true) {
-        joaquimDado = rolagem(20)+6;
+        joaquimDado = rolagem(20)+9;
         if (joaquimDado >= dt) {
             joaquimDano = rolagem(6)+rolagem(6)+1;
             joaquimDanoFinal = joaquimDano - perfuracao;
@@ -190,22 +192,22 @@ function definirDanos() {
         listaDanos.push(`<img src="assets/Joaquim.png" title="Resultado: ` + joaquimDado + `, Dano: ` + joaquimDano + ` - ` + perfuracao + `"> ` + joaquimDanoFinal);
     }
     }
-    if (gustavoolAuxiliares.includes("Capper") == true) {
-        if (document.getElementById("Capper").checked == true) {
-        capperDado = rolagem(20)+7;
-        if (capperDado >= dt) {
-            capperDano = rolagem(8)+rolagem(6)+5;
-            capperDanoFinal = capperDano - perfuracao;
-            if (capperDanoFinal < 0) {
-                capperDanoFinal = 0;
-            }
-        } else {
-            capperDano = 0;
-            capperDanoFinal = 0;
-        }
-        listaDanos.push(`<img src="assets/Capper.png" title="Resultado: ` + capperDado + `, Dano: ` + capperDano + ` - ` + perfuracao + `"> ` + capperDanoFinal);
-    }
-    }
+    // if (gustavoolAuxiliares.includes("Capper") == true) {
+    //     if (document.getElementById("Capper").checked == true) {
+    //     capperDado = rolagem(20)+7;
+    //     if (capperDado >= dt) {
+    //         capperDano = rolagem(8)+rolagem(6)+5;
+    //         capperDanoFinal = capperDano - perfuracao;
+    //         if (capperDanoFinal < 0) {
+    //             capperDanoFinal = 0;
+    //         }
+    //     } else {
+    //         capperDano = 0;
+    //         capperDanoFinal = 0;
+    //     }
+    //     listaDanos.push(`<img src="assets/Capper.png" title="Resultado: ` + capperDado + `, Dano: ` + capperDano + ` - ` + perfuracao + `"> ` + capperDanoFinal);
+    // }
+    // }
     if (gustavoolAuxiliares.includes("Miguel") == true) {
         if (document.getElementById("Miguel").checked == true) {
         miguelDado = rolagem(20)+4;
@@ -224,10 +226,13 @@ function definirDanos() {
     }
     if (jvictorAuxiliares.includes("Andromedus") == true) {
         if (document.getElementById("Andromedus").checked == true) {
-        andromedusDado = rolagem(20)+6;
+        andromedusDado = rolagem(20)+8;
         if (andromedusDado >= dt) {
-            andromedusDano = rolagem(10)+rolagem(10)+2+1;
+            andromedusDano = rolagem(12)+rolagem(12)+2+3;
             andromedusDanoDefendido = andromedusDano - corte;
+            if (andromedusDanoDefendido < 0) {
+                andromedusDanoDefendido = 0;
+            }
             andromedusDanoLuz = rolagem(6);
             andromedusDanoLuzDefendido = andromedusDanoLuz - luz;
             if (andromedusDanoLuzDefendido < 0) {
@@ -265,8 +270,8 @@ function definirDanos() {
         braidDado.sort((a, b) => a - b);
         braidDadoFinal = braidDado[0];
         if (braidDadoFinal >= dt) {
-            braidDano = rolagem(8)+2;
-            braidDanoFinal = braidDano - impacto;
+            braidDano = rolagem(12)+rolagem(12);
+            braidDanoFinal = braidDano - balistico;
             if (braidDanoFinal < 0) {
                 braidDanoFinal = 0;
             }
@@ -274,7 +279,7 @@ function definirDanos() {
             braidDano = 0;
             braidDanoFinal = 0;
         }
-        listaDanos.push(`<img src="assets/Braid.png" title="Resultado: [` + braidDado + `], Dano: ` + braidDano + ` - ` + impacto + `"> ` + braidDanoFinal);
+        listaDanos.push(`<img src="assets/Braid.png" title="Resultado: [` + braidDado + `], Dano: ` + braidDano + ` - ` + balistico + `"> ` + braidDanoFinal);
     }
     }
     if (ivanAuxiliares.includes("Alexandrino") == true) {
@@ -373,4 +378,32 @@ function resetarDanos() {
     kaibaDano = 0;
     kaibaDanoFinal = 0;
     listaDanos = [];
+}
+
+function trocarPagina() {
+    if (pagina == 1) {
+    document.getElementById("pag-1").setAttribute("class","secreto");
+    document.getElementById("pag-2").setAttribute("class","");
+    AddConfigInicial();
+    pagina = 2;
+    } else {
+        document.getElementById("pag-2").setAttribute("class","secreto");
+        document.getElementById("pag-1").setAttribute("class","");
+        pagina = 1;
+    }
+}
+
+function AddConfigInicial() {
+    document.getElementById("nome").innerHTML = document.getElementById("adicionar").value;
+}
+
+function somarDado() {
+    repetirRolagem = document.getElementById("quantidade-soma").value;
+    dado = document.getElementById("dado-soma").value;
+    if (primeiro == 1) {
+    document.getElementById("previa").innerHTML = repetirRolagem + "d" + dado;
+    primeiro = 0;
+    } else {
+        document.getElementById("previa").innerHTML = document.getElementById("previa").innerHTML + "+" + repetirRolagem + "d" + dado;
+    }
 }
