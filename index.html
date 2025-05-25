@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Auxiliares</title>
-    <link id="estilo" rel="stylesheet" href="style-temp3.css">
+    <link id="estilo" rel="stylesheet" href="style-temp4.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
     <header>
         <select id="tema" onclick="alterarTema()">
+            <option id="tema-sacrificio" value="style-temp4.css">Sacrifício</option>
             <option id="tema-trevas" value="style-temp3.css">Trevas</option>
             <option id="tema-roxo" value="style-roxo.css">Roxo</option>
             <option id="tema-azul" value="style-azul.css">Azul</option>
@@ -17,34 +18,35 @@
         </select>
     </header>
     <main>
+        <section id="pag-1" class="">
         <div class="parte-superior">
         <div class="selecao">
             <section>
-                <p>Armadillo</p>
+                <p class="branco">Armadillo</p>
             <select id="armadillo" onclick="escolhaPrincipal()">
-                <option value="0">Firmino</option>
-                <option value="1">Wander</option>
-                <option value="2">Lee</option>
+                <option value="0">Lee</option>
+                <option value="1">Rogério</option>
             </select>
         </section>
         <section>
-            <p>Gustavool</p>
+            <p class="branco">Gustavool</p>
         <select id="gustavool" onclick="escolhaPrincipal()">
             <option value="0">Denilson</option>
             <option value="1">Joaquim</option>
-            <option value="2">Capper</option>
-            <option value="3">Miguel</option>
+            <option value="2">Miguel</option>
+            <option value="3">Aracnatrix</option>
+            <option value="4">Bruno</option>
         </select>
     </section>
     <section>
-        <p>Jvictor</p>
+        <p class="preto">Jvictor</p>
     <select id="jvictor" onclick="escolhaPrincipal()">
         <option value="0">Andrômedus</option>
         <option value="1">Kandoru</option>
     </select>
     </section>
     <section>
-        <p>Ivan</p>
+        <p class="preto">Ivan</p>
         <select id="ivan" onclick="escolhaPrincipal()">
             <option value="0">Braid</option>
             <option value="1">Alexandrino</option>
@@ -55,14 +57,17 @@
     <h3></h3>
     <div id="todos-auxiliares">
     <div id="auxiliares">
-        <div id="divFirmino" class="">
+        <!-- <div id="divFirmino" class="">
             <input type="checkbox" class="listaAuxiliar" id="Firmino" checked><img src="assets/Firmino.png" class="grandioso"> Firminoㅤㅤㅤㅤㅤㅤㅤㅤㅤ
         </div>
         <div id="divWander" class="">
             <input type="checkbox" class="listaAuxiliar" id="Wander" checked><img src="assets/Wander.png"> Wanderㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-        </div>
+        </div> -->
         <div id="divLee" class="">
             <input type="checkbox" class="listaAuxiliar" id="Lee" checked><img src="assets/Lee.png"> Leeㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        </div>
+        <div id="divRogerio" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Rogerio" checked><img src="assets/Rogerio.png"> Rogérioㅤㅤㅤㅤㅤㅤㅤㅤㅤ
         </div>
     </div>
     <div id="auxiliares">
@@ -72,30 +77,36 @@
         <div id="divJoaquim" class="">
             <input type="checkbox" class="listaAuxiliar" id="Joaquim" checked><img src="assets/Joaquim.png"> Joaquimㅤㅤㅤㅤㅤㅤㅤ
         </div>
-        <div id="divCapper" class="">
+        <!-- <div id="divCapper" class="">
             <input type="checkbox" class="listaAuxiliar" id="Capper" checked><img src="assets/Capper.png"> Capperㅤㅤㅤㅤㅤㅤㅤ
-        </div>
+        </div> -->
         <div id="divMiguel" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Miguel"><img src="assets/Miguel.png"> Miguelㅤㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="listaAuxiliar" id="Miguel" checked><img src="assets/Miguel.png"> Miguelㅤㅤㅤㅤㅤㅤㅤ
+        </div>
+        <div id="divAracnatrix" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Aracnatrix" checked><img src="assets/Aracnatrix.png"> Aracnatrixㅤㅤㅤㅤㅤㅤㅤ
+        </div>
+        <div id="divBruno" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Bruno" checked><img src="assets/Bruno.png"> Brunoㅤㅤㅤㅤㅤㅤㅤ
         </div>
     </div>
         <div id="auxiliares">
         <div id="divAndromedus" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Andromedus" checked><img src="assets/Andromedus.png"> Andrômedusㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Andromedus" checked><img src="assets/Andromedus.png"> Andrômedusㅤㅤㅤㅤㅤㅤ
         </div>
         <div id="divKandoru" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Kandoru" checked><img src="assets/Kandoru.png"> Kandoruㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Kandoru" checked><img src="assets/Kandoru.png"> Kandoruㅤㅤㅤㅤㅤㅤ
         </div>
     </div>
     <div id="auxiliares">
         <div id="divBraid" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Braid" checked><img src="assets/Braid.png"> Braid
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Braid" checked><img src="assets/Braid.png"> Braid
         </div>
         <div id="divAlexandrino" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Alexandrino" checked><img src="assets/Alexandrino.png"> Alexandrino
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Alexandrino" checked><img src="assets/Alexandrino.png"> Alexandrino
         </div>
         <div id="divKaiba" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Kaiba"><img src="assets/Kaiba.png"> Kaiba
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Kaiba" checked><img src="assets/Kaiba.png"> Kaiba
         </div>
     </div>
 </div>
@@ -215,6 +226,22 @@
     <h2 id="txtDanoTotal"></h2>
     <h1 id="dano-total"></h1>
 </div>
+</section>
+<section id="pag-2" class="secreto">
+    <section id="adicionando">
+    <p id="nome"></p>
+    <h4>Somar</h4>
+    <section id="coluna-soma">
+        <section id="dados-soma">
+    <input type="number" class="dt" id="quantidade-soma" min="1" max="99">
+    <h4>d</h4>
+    <input type="number" class="dt" id="dado-soma" min="1" max="100">
+    <p class="botao" onclick="somarDado()">+</p>
+        </section>
+    </section>
+    <p id="previa"></p>
+</section>
+</section>
     </main>
     <script src="js/app.js"></script>
 </body>

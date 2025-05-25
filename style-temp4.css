@@ -16,9 +16,10 @@
 html {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgb(44, 0, 0), rgb(0, 0, 0));
+    background-image: url(assets/FundoTemp4.png);
     background-repeat:no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 #tema {
@@ -53,9 +54,19 @@ html {
     align-items: center;
 }
 
+.preto {
+    color:black;
+    text-shadow: 0px 0px 10px rgb(169, 0, 0);  
+}
+
+.branco {
+    color:rgb(255, 255, 255);
+    text-shadow: 0px 0px 15px rgb(174, 0, 255);
+}
+
 p {
     font-size: 200%;
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.597);
+    text-shadow: 0px 0px 15px rgb(174, 0, 255);
 }
 
 .selecao {
@@ -78,7 +89,7 @@ select {
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    background-color: rgb(17, 0, 0);
+    background-color: rgb(12, 0, 17);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.619);
 }
 
@@ -100,8 +111,8 @@ select {
     height: 20px;
     border-width: 2px;
     border-style: solid;
-    border-color: rgb(255, 0, 0);
-    background-color: rgb(51, 24, 24);
+    border-color: rgb(174, 0, 255);
+    background-color: rgb(41, 24, 51);
     padding-bottom: 23px;
     padding-left: 5px;
     padding-right: 5px;
@@ -109,7 +120,7 @@ select {
 }
 
 .botao:hover {
-    background-color: rgb(90, 43, 43);
+    background-color: rgb(73, 49, 87);
     cursor:pointer
 }
 
@@ -126,7 +137,7 @@ select {
 
 h3 {
     margin-top: 1%;
-    color: rgb(228, 185, 185);
+    color: rgb(210, 185, 228);
 }
 
 #todos-auxiliares {
@@ -136,6 +147,10 @@ h3 {
 #auxiliares {
     display: flex;
     flex-direction: column;
+}
+
+.lista-preta {
+    accent-color: rgb(255, 0, 0);
 }
 
 .listaAuxiliar {
@@ -158,8 +173,8 @@ input::-webkit-outer-spin-button,
 input {
     margin-top: 1%;
     text-align: center;
-    background-color: rgb(17, 0, 0);
-    accent-color: rgb(255, 0, 0);
+    background-color: rgb(12, 0, 17);
+    accent-color: rgb(174, 0, 255);
 }
 
 .grandioso {
@@ -171,8 +186,8 @@ input {
     margin-top: 2%;
     padding: 0.2%;
     border-radius: 20px;
-    color:rgb(255, 0, 0);
-    text-shadow: 0px 0px 20px rgb(255, 0, 0);
+    color:rgb(174, 0, 255);
+    text-shadow: 0px 0px 20px rgb(174, 0, 255);
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 0px 0px 20px black;
@@ -236,8 +251,8 @@ input {
 }
 
 #txt-quimico {
-    color:rgb(28, 166, 0);
-    text-shadow: 0px 0px 20px rgb(51, 255, 0);
+    color:rgb(19, 112, 0);
+    text-shadow: 0px 0px 20px rgb(33, 165, 0);
 }
 
 #quimico {
@@ -246,8 +261,8 @@ input {
 }
 
 #txt-eletricidade {
-    color:rgb(166, 166, 0);
-    text-shadow: 0px 0px 20px rgb(255, 242, 0);
+    color:rgb(124, 124, 0);
+    text-shadow: 0px 0px 20px rgb(174, 165, 0);
 }
 
 #eletricidade {
@@ -371,8 +386,8 @@ input {
 }
 
 #txt-vazio {
-    color: #6f6f6f;
-    text-shadow: 0px 0px 20px #676767;
+    color: #454545;
+    text-shadow: 0px 0px 20px #353535;
 }
 
 #vazio {
@@ -440,8 +455,8 @@ button {
     padding: 0.5%;
     border-radius: 20px;
     margin-top: 1.5%;
-    background-color: rgb(51, 24, 24);
-    border-color: rgb(255, 0, 0);
+    background-color: rgb(41, 24, 51);
+    border-color: rgb(174, 0, 255);
     box-shadow: 0px 0px 30px black;
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
@@ -459,11 +474,22 @@ h4 {
 
 h2 {
     font-size: 150%;
-    color: rgb(228, 185, 185);
+    color: rgb(210, 185, 228);
 }
 
 h1 {
     font-size: 300%;
     color:#ffffff;
-    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+    text-shadow: 0px 0px 10px rgb(174, 0, 255);
+}
+
+#adicionando {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#dados-soma {
+    gap:4px;
+    flex-direction: row;
 }
