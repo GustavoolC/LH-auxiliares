@@ -26,12 +26,12 @@ function rolagem(max) {
 }
 
 function somarDanos() {
-    return firminoDanoFinal+wanderDanoFinal+leeDanoFinal+denilsonDanoFinal+joaquimDanoFinal+capperDanoFinal+miguelDanoFinal+andromedusDanoFinal+kandoruDanoFinal+braidDanoFinal+alexandrinoDanoFinal+kaibaDanoFinal;
+    return leeDanoFinal+rogerioDanoFinal+denilsonDanoFinal+joaquimDanoFinal+miguelDanoFinal+aracnatrixDanoFinal+brunoDanoFinal+andromedusDanoFinal+kandoruDanoFinal+braidDanoFinal+alexandrinoDanoFinal+kaibaDanoFinal;
 }
 
 function definirAuxiliares() {
-    armadilloAuxiliares = ["Firmino","Wander","Lee"];
-    gustavoolAuxiliares = ["Denilson","Joaquim","Capper","Miguel"];
+    armadilloAuxiliares = ["Lee","Rogerio"];
+    gustavoolAuxiliares = ["Denilson","Joaquim","Miguel","Aracnatrix","Bruno"];
     jvictorAuxiliares = ["Andromedus","Kandoru"];
     ivanAuxiliares = ["Braid","Alexandrino","Kaiba"];
     armadilloPrincipal = document.getElementById("armadillo").value;
@@ -49,63 +49,78 @@ function definirAuxiliares() {
 }
 
 function gerarLista() {
-    if (armadilloAuxiliares.includes("Firmino") == true) {
-        document.getElementById("divFirmino").setAttribute("class","");
-    } else {
-        document.getElementById("divFirmino").setAttribute("class","secreto");
-    }
-    if (armadilloAuxiliares.includes("Wander") == true) {
-        document.getElementById("divWander").setAttribute("class","");
-    } else {
-        document.getElementById("divWander").setAttribute("class","secreto");
-    }
+    // if (armadilloAuxiliares.includes("Firmino") == true) {
+    //     document.getElementById("divFirmino").setAttribute("class","");
+    // } else {
+    //     document.getElementById("divFirmino").setAttribute("class","secreto");
+    // }
+    // if (armadilloAuxiliares.includes("Wander") == true) {
+    //     document.getElementById("divWander").setAttribute("class","");
+    // } else {
+    //     document.getElementById("divWander").setAttribute("class","secreto");
+    // }
     if (armadilloAuxiliares.includes("Lee") == true) {
-        document.getElementById("divLee").setAttribute("class","");
+        document.getElementById("divLee").setAttribute("class","branco");
     } else {
         document.getElementById("divLee").setAttribute("class","secreto");
     }
+    if (armadilloAuxiliares.includes("Rogerio") == true) {
+        document.getElementById("divRogerio").setAttribute("class","branco");
+    } else {
+        document.getElementById("divRogerio").setAttribute("class","secreto");
+    }
     if (gustavoolAuxiliares.includes("Denilson") == true) {
-        document.getElementById("divDenilson").setAttribute("class","");
+        document.getElementById("divDenilson").setAttribute("class","branco");
     } else {
         document.getElementById("divDenilson").setAttribute("class","secreto");
     }
     if (gustavoolAuxiliares.includes("Joaquim") == true) {
-        document.getElementById("divJoaquim").setAttribute("class","");
+        document.getElementById("divJoaquim").setAttribute("class","branco");
     } else {
         document.getElementById("divJoaquim").setAttribute("class","secreto");
     }
-    if (gustavoolAuxiliares.includes("Capper") == true) {
-        document.getElementById("divCapper").setAttribute("class","");
-    } else {
-        document.getElementById("divCapper").setAttribute("class","secreto");
-    }
+    // if (gustavoolAuxiliares.includes("Capper") == true) {
+    //     document.getElementById("divCapper").setAttribute("class","");
+    // } else {
+    //     document.getElementById("divCapper").setAttribute("class","secreto");
+    // }
     if (gustavoolAuxiliares.includes("Miguel") == true) {
-        document.getElementById("divMiguel").setAttribute("class","");
+        document.getElementById("divMiguel").setAttribute("class","branco");
     } else {
         document.getElementById("divMiguel").setAttribute("class","secreto");
     }
+    if (gustavoolAuxiliares.includes("Aracnatrix") == true) {
+        document.getElementById("divAracnatrix").setAttribute("class","branco");
+    } else {
+        document.getElementById("divAracnatrix").setAttribute("class","secreto");
+    }
+    if (gustavoolAuxiliares.includes("Bruno") == true) {
+        document.getElementById("divBruno").setAttribute("class","branco");
+    } else {
+        document.getElementById("divBruno").setAttribute("class","secreto");
+    }
     if (jvictorAuxiliares.includes("Andromedus") == true) {
-        document.getElementById("divAndromedus").setAttribute("class","");
+        document.getElementById("divAndromedus").setAttribute("class","preto");
     } else {
         document.getElementById("divAndromedus").setAttribute("class","secreto");
     }
     if (jvictorAuxiliares.includes("Kandoru") == true) {
-        document.getElementById("divKandoru").setAttribute("class","");
+        document.getElementById("divKandoru").setAttribute("class","preto");
     } else {
         document.getElementById("divKandoru").setAttribute("class","secreto");
     }
     if (ivanAuxiliares.includes("Braid") == true) {
-        document.getElementById("divBraid").setAttribute("class","");
+        document.getElementById("divBraid").setAttribute("class","preto");
     } else {
         document.getElementById("divBraid").setAttribute("class","secreto");
     }
     if (ivanAuxiliares.includes("Alexandrino") == true) {
-        document.getElementById("divAlexandrino").setAttribute("class","");
+        document.getElementById("divAlexandrino").setAttribute("class","preto");
     } else {
         document.getElementById("divAlexandrino").setAttribute("class","secreto");
     }
     if (ivanAuxiliares.includes("Kaiba") == true) {
-        document.getElementById("divKaiba").setAttribute("class","");
+        document.getElementById("divKaiba").setAttribute("class","preto");
     } else {
         document.getElementById("divKaiba").setAttribute("class","secreto");
     }
@@ -160,11 +175,27 @@ function definirDanos() {
         listaDanos.push(`<img src="assets/Lee.png" title="Resultado: ` + leeDado + `, Dano: ` + leeDano + ` - ` + balistico + `"> ` + leeDanoFinal);
     }
     }
+    if (armadilloAuxiliares.includes("Rogerio") == true) {
+        if (document.getElementById("Rogerio").checked == true) {
+        rogerioDado = rolagem(20)+8;
+        if (rogerioDado >= dt) {
+            rogerioDano = rolagem(8)+rolagem(8)+rolagem(8)+rolagem(8);
+            rogerioDanoFinal = leeDano - perfuracao;
+            if (rogerioDanoFinal < 0) {
+                rogerioDanoFinal = 0;
+            }
+        } else {
+            rogerioDano = 0;
+            rogerioDanoFinal = 0;
+        }
+        listaDanos.push(`<img src="assets/Rogerio.png" title="Resultado: ` + rogerioDado + `, Dano: ` + rogerioDano + ` - ` + perfuracao + `"> ` + rogerioDanoFinal);
+    }
+    }
     if (gustavoolAuxiliares.includes("Denilson") == true) {
         if (document.getElementById("Denilson").checked == true) {
             denilsonDado = rolagem(20)+11;
         if (denilsonDado >= dt) {
-            denilsonDano = rolagem(2)+rolagem(10)+5;
+            denilsonDano = rolagem(8)+rolagem(8)+rolagem(8)+3;
             denilsonDanoFinal = denilsonDano - impacto;
             if (denilsonDanoFinal < 0) {
                 denilsonDanoFinal = 0;
@@ -222,6 +253,38 @@ function definirDanos() {
             miguelDanoFinal = 0;
         }
         listaDanos.push(`<img src="assets/Miguel.png" title="Resultado: ` + miguelDado + `, Dano: ` + miguelDano + ` - ` + perfuracao + `"> ` + miguelDanoFinal);
+    }
+    }
+    if (gustavoolAuxiliares.includes("Aracnatrix") == true) {
+        if (document.getElementById("Aracnatrix").checked == true) {
+        aracnatrixDado = rolagem(20)+6;
+        if (aracnatrixDado >= dt) {
+            aracnatrixDano = rolagem(8)+rolagem(8)+rolagem(8)+4;
+            aracnatrixDanoFinal = aracnatrixDano - perfuracao;
+            if (aracnatrixDanoFinal < 0) {
+                aracnatrixDanoFinal = 0;
+            }
+        } else {
+            aracnatrixDano = 0;
+            aracnatrixDanoFinal = 0;
+        }
+        listaDanos.push(`<img src="assets/Aracnatrix.png" title="Resultado: ` + aracnatrixDado + `, Dano: ` + aracnatrixDano + ` - ` + perfuracao + `"> ` + aracnatrixDanoFinal);
+    }
+    }
+        if (gustavoolAuxiliares.includes("Bruno") == true) {
+        if (document.getElementById("Bruno").checked == true) {
+        brunoDado = rolagem(20)-2;
+        if (brunoDado >= dt) {
+            brunoDano = rolagem(6);
+            brunoDanoFinal = brunoDano - eletricidade;
+            if (brunoDanoFinal < 0) {
+                brunoDanoFinal = 0;
+            }
+        } else {
+            brunoDano = 0;
+            brunoDanoFinal = 0;
+        }
+        listaDanos.push(`<img src="assets/Bruno.png" title="Resultado: ` + brunoDado + `, Dano: ` + brunoDano + ` - ` + eletricidade + `"> ` + brunoDanoFinal);
     }
     }
     if (jvictorAuxiliares.includes("Andromedus") == true) {
@@ -350,20 +413,26 @@ function definirDefesas() {
 }
 
 function resetarDanos() {
-    firminoDano = 0;
-    firminoDanoFinal = 0;
-    wanderDano = 0;
-    wanderDanoFinal = 0;
+    // firminoDano = 0;
+    // firminoDanoFinal = 0;
+    // wanderDano = 0;
+    // wanderDanoFinal = 0;
     leeDano = 0;
     leeDanoFinal = 0;
+    rogerioDano = 0;
+    rogerioDanoFinal = 0;
     denilsonDano = 0;
     denilsonDanoFinal = 0;
     joaquimDano = 0;
     joaquimDanoFinal = 0;
-    capperDano = 0;
-    capperDanoFinal = 0;
+    // capperDano = 0;
+    // capperDanoFinal = 0;
     miguelDano = 0;
     miguelDanoFinal = 0;
+    aracnatrixDano = 0;
+    aracnatrixDanoFinal = 0;
+    brunoDano = 0;
+    brunoDanoFinal = 0;
     andromedusDano = 0;
     andromedusDanoDefendido = 0;
     andromedusDanoLuz = 0;
