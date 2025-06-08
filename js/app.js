@@ -26,25 +26,29 @@ function rolagem(max) {
 }
 
 function somarDanos() {
-    return leeDanoFinal+rogerioDanoFinal+denilsonDanoFinal+joaquimDanoFinal+brunoDanoFinal+altmanDanoFinal+andromedusDanoFinal+kandoruDanoFinal+braidDanoFinal+alexandrinoDanoFinal+kaibaDanoFinal;
+    return leeDanoFinal+rogerioDanoFinal+saniluscusDanoFinal+denilsonDanoFinal+joaquimDanoFinal+brunoDanoFinal+altmanDanoFinal+andromedusDanoFinal+kandoruDanoFinal+braidDanoFinal+alexandrinoDanoFinal+kaibaDanoFinal+aliceDanoFinal+biluDanoFinal;
 }
 
 function definirAuxiliares() {
-    armadilloAuxiliares = ["Lee","Rogerio"];
+    armadilloAuxiliares = ["Lee","Rogerio","Saniluscus"]
     gustavoolAuxiliares = ["Denilson","Joaquim","Bruno","Altman"];
     jvictorAuxiliares = ["Andromedus","Kandoru"];
     ivanAuxiliares = ["Braid","Alexandrino","Kaiba"];
+    magAuxiliares = ["Alice","Bilu"];
     armadilloPrincipal = document.getElementById("armadillo").value;
     gustavoolPrincipal = document.getElementById("gustavool").value;
     jvictorPrincipal = document.getElementById("jvictor").value;
     ivanPrincipal = document.getElementById("ivan").value;
+    magPrincipal = document.getElementById("mag").value;
     armadilloAuxiliares.splice(armadilloPrincipal, 1);
     gustavoolAuxiliares.splice(gustavoolPrincipal, 1);
     jvictorAuxiliares.splice(jvictorPrincipal, 1);
     ivanAuxiliares.splice(ivanPrincipal, 1);
+    magAuxiliares.splice(magPrincipal, 1);
     auxiliares = armadilloAuxiliares.concat(gustavoolAuxiliares);
     auxiliares = auxiliares.concat(jvictorAuxiliares);
     auxiliares = auxiliares.concat(ivanAuxiliares);
+    auxiliares = auxiliares.concat(magAuxiliares);
     console.log(auxiliares);
 }
 
@@ -68,6 +72,11 @@ function gerarLista() {
         document.getElementById("divRogerio").setAttribute("class","branco");
     } else {
         document.getElementById("divRogerio").setAttribute("class","secreto");
+    }
+    if (armadilloAuxiliares.includes("Saniluscus") == true) {
+        document.getElementById("divSaniluscus").setAttribute("class","branco");
+    } else {
+        document.getElementById("divSaniluscus").setAttribute("class","secreto");
     }
     if (gustavoolAuxiliares.includes("Denilson") == true) {
         document.getElementById("divDenilson").setAttribute("class","branco");
@@ -128,6 +137,16 @@ function gerarLista() {
         document.getElementById("divKaiba").setAttribute("class","preto");
     } else {
         document.getElementById("divKaiba").setAttribute("class","secreto");
+    }
+    if (magAuxiliares.includes("Alice") == true) {
+        document.getElementById("divAlice").setAttribute("class","preto");
+    } else {
+        document.getElementById("divAlice").setAttribute("class","secreto");
+    }
+    if (magAuxiliares.includes("Bilu") == true) {
+        document.getElementById("divBilu").setAttribute("class","preto");
+    } else {
+        document.getElementById("divBilu").setAttribute("class","secreto");
     }
 }
 
@@ -194,6 +213,22 @@ function definirDanos() {
             rogerioDanoFinal = 0;
         }
         listaDanos.push(`<img src="assets/Rogerio.png" title="Resultado: ` + rogerioDado + `, Dano: ` + rogerioDano + ` - ` + perfuracao + `"> ` + rogerioDanoFinal);
+    }
+    }
+    if (armadilloAuxiliares.includes("Saniluscus") == true) {
+        if (document.getElementById("Saniluscus").checked == true) {
+        saniluscusDado = rolagem(20)+8;
+        if (rogerioDado >= dt) {
+            saniluscusDano = rolagem(6)+rolagem(6)+rolagem(6);
+            saniluscusDanoFinal = saniluscusDano - perfuracao;
+            if (saniluscusDanoFinal < 0) {
+                saniluscusDanoFinal = 0;
+            }
+        } else {
+            saniluscusDano = 0;
+            saniluscusDanoFinal = 0;
+        }
+        listaDanos.push(`<img src="assets/Saniluscus.png" title="Resultado: ` + saniluscusDado + `, Dano: ` + saniluscusDano + ` - ` + perfuracao + `"> ` + saniluscusDanoFinal);
     }
     }
     if (gustavoolAuxiliares.includes("Denilson") == true) {
@@ -398,6 +433,38 @@ function definirDanos() {
         listaDanos.push(`<img src="assets/Kaiba.png" title="Resultado: ` + kaibaDado + `, Dano: ` + kaibaDano + ` - ` + corte + `"> ` + kaibaDanoFinal);
     }
     }
+        if (magAuxiliares.includes("Alice") == true) {
+        if (document.getElementById("Alice").checked == true) {
+        aliceDado = rolagem(20)+7;
+        if (aliceDado >= dt) {
+            aliceDano = rolagem(8)+rolagem(8)+2;
+            aliceDanoFinal = aliceDano - impacto;
+            if (aliceDanoFinal < 0) {
+                aliceDanoFinal = 0;
+            }
+        } else {
+            aliceDano = 0;
+            aliceDanoFinal = 0;
+        }
+        listaDanos.push(`<img src="assets/Alice.png" title="Resultado: ` + aliceDado + `, Dano: ` + aliceDano + ` - ` + impacto + `"> ` + aliceDanoFinal);
+    }
+    }
+    if (magAuxiliares.includes("Bilu") == true) {
+        if (document.getElementById("Bilu").checked == true) {
+        biluDado = rolagem(20)+3;
+        if (biluDado >= dt) {
+            biluDano = rolagem(4)+rolagem(4)+2;
+            biluDanoFinal = biluDano - perfuracao;
+            if (biluDanoFinal < 0) {
+                biluDanoFinal = 0;
+            }
+        } else {
+            biluDano = 0;
+            biluDanoFinal = 0;
+        }
+        listaDanos.push(`<img src="assets/Bilu.png" title="Resultado: ` + biluDado + `, Dano: ` + biluDano + ` - ` + perfuracao + `"> ` + biluDanoFinal);
+    }
+    }
     somaDanos = listaDanos.join(" + ");
 }
 
@@ -469,6 +536,10 @@ function resetarDanos() {
     alexandrinoDanoFinal = 0;
     kaibaDano = 0;
     kaibaDanoFinal = 0;
+    aliceDano = 0;
+    aliceDanoFinal = 0;
+    biluDano = 0;
+    biluDanoFinal = 0;
     listaDanos = [];
 }
 
