@@ -3,6 +3,7 @@ let listaAuxiliares;
 let pagina = 1;
 let primeiro = 1
 escolhaPrincipal();
+resetarDanos();
 
 function iniciarTeste() {
     resetarDanos();
@@ -26,13 +27,13 @@ function rolagem(max) {
 }
 
 function somarDanos() {
-    return leeDanoFinal+rogerioDanoFinal+saniluscusDanoFinal+denilsonDanoFinal+joaquimDanoFinal+brunoDanoFinal+altmanDanoFinal+andromedusDanoFinal+kandoruDanoFinal+braidDanoFinal+alexandrinoDanoFinal+kaibaDanoFinal+aliceDanoFinal+biluDanoFinal;
+    return leeDanoFinal+rogerioDanoFinal+saniluscusDanoFinal+denilsonDanoFinal+joaquimDanoFinal+brunoDanoFinal+altmanDanoFinal+andromedusDanoFinal+kandoruDanoFinal+ladraoDanoFinal+braidDanoFinal+alexandrinoDanoFinal+kaibaDanoFinal+aliceDanoFinal+biluDanoFinal;
 }
 
 function definirAuxiliares() {
     armadilloAuxiliares = ["Lee","Rogerio","Saniluscus"]
     gustavoolAuxiliares = ["Denilson","Joaquim","Bruno","Altman"];
-    jvictorAuxiliares = ["Andromedus","Kandoru"];
+    jvictorAuxiliares = ["Andromedus","Kandoru","Ladrao"];
     ivanAuxiliares = ["Braid","Alexandrino","Kaiba"];
     magAuxiliares = ["Alice","Bilu"];
     armadilloPrincipal = document.getElementById("armadillo").value;
@@ -122,6 +123,11 @@ function gerarLista() {
         document.getElementById("divKandoru").setAttribute("class","preto");
     } else {
         document.getElementById("divKandoru").setAttribute("class","secreto");
+    }
+    if (jvictorAuxiliares.includes("Ladrao") == true) {
+        document.getElementById("divLadrao").setAttribute("class","preto");
+    } else {
+        document.getElementById("divLadrao").setAttribute("class","secreto");
     }
     if (ivanAuxiliares.includes("Braid") == true) {
         document.getElementById("divBraid").setAttribute("class","preto");
@@ -383,6 +389,30 @@ function definirDanos() {
         listaDanos.push(`<img src="assets/Kandoru.png" title="Resultado: ` + kandoruDado + `, Dano: ` + kandoruDano + ` - ` + corte + `"> ` + kandoruDanoFinal);
     }
     }
+        if (jvictorAuxiliares.includes("Ladrao") == true) {
+        if (document.getElementById("Ladrao").checked == true) {
+        ladraoDado = rolagem(20)+10;
+            if (ladraoDado >= dt) {
+            ladraoDano = rolagem(6)+rolagem(6)+5;
+            ladraoDanoDefendido = ladraoDano - corte;
+            if (ladraoDanoDefendido < 0) {
+                ladraoDanoDefendido = 0;
+            }
+            ladraoDanoFogo = rolagem(6);
+            ladraoDanoFogoDefendido = ladraoDanoFogo - fogo;
+            if (ladraoDanoFogoDefendido < 0) {
+                ladraoDanoFogoDefendido = 0;
+            }
+            ladraoDanoFinal = ladraoDanoDefendido + ladraoDanoFogoDefendido;
+        } else {
+            ladraoDano = 0;
+            ladraoDanoFogo = 0;
+            ladraoDanoFogoDefendido = 0;
+            ladraoDanoFinal = 0;
+        }
+        listaDanos.push(`<img src="assets/Ladrao.png" title="Resultado: ` + ladraoDado + `, Dano: (` + ladraoDano + ` - ` + corte + `) + (` + ladraoDanoFogo + ` - ` + fogo + `)"> ` + ladraoDanoFinal);
+    }
+    }
     if (ivanAuxiliares.includes("Braid") == true) {
         if (document.getElementById("Braid").checked == true) {
         braidDado = [rolagem(20)+4,rolagem(20)+4,rolagem(20)+4];
@@ -509,6 +539,8 @@ function resetarDanos() {
     leeDanoFinal = 0;
     rogerioDano = 0;
     rogerioDanoFinal = 0;
+    saniluscusDano = 0;
+    saniluscusDanoFinal = 0;
     denilsonDano = 0;
     denilsonDanoFinal = 0;
     joaquimDano = 0;
@@ -530,6 +562,10 @@ function resetarDanos() {
     andromedusDanoFinal = 0;
     kandoruDano = 0;
     kandoruDanoFinal = 0;
+    ladraoDanoDefendido = 0;
+    ladraoDanoFogo = 0;
+    ladraoDanoFogoDefendido = 0;
+    ladraoDanoFinal = 0;
     braidDano = 0;
     braidDanoFinal = 0;
     alexandrinoDano = 0;
