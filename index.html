@@ -27,40 +27,56 @@
                 <option value="0">Lee</option>
                 <option value="1">Rogério</option>
                 <option value="2">Saniluscus</option>
+                <option value="3">Novo</option>
             </select>
         </section>
         <section>
             <p class="branco">Gustavool</p>
         <select id="gustavool" onclick="escolhaPrincipal()">
-            <option value="0">Denilson</option>
-            <option value="1">Joaquim</option>
-            <option value="2">Bruno</option>
-            <option value="3">Alt-Man</option>
+            <option value="0">Bruno</option>
+            <option value="1">Alt-Man</option>
+            <option value="2">Jeremias</option>
         </select>
     </section>
     <section>
-        <p class="preto">Jvictor</p>
+        <p class="branco">Jvictor</p>
     <select id="jvictor" onclick="escolhaPrincipal()">
         <option value="0">Andrômedus</option>
         <option value="1">Kandoru</option>
         <option value="2">Ladrão de Cenouras</option>
+        <option value="2">Novo</option>
     </select>
     </section>
     <section>
         <p class="preto">Ivan</p>
         <select id="ivan" onclick="escolhaPrincipal()">
             <option value="0">Braid</option>
-            <option value="1">Alexandrino</option>
-            <option value="2">Kaiba</option>
+            <option value="1">Kaiba</option>
+            <option value="2">Kaioleb</option>
         </select>
+    </section>
+    <section>
+        <p class="preto">Luc</p>
+    <select id="luc" onclick="escolhaPrincipal()">
+        <option value="0">Scarbo</option>
+        <option value="1">Novo</option>
+    </select>
     </section>
     <section>
         <p class="preto">Mag</p>
             <select id="mag" onclick="escolhaPrincipal()">
-                <option value="0">Alice</option>
-                <option value="1">Bilu</option>
-            </select>
-        </section>
+                <option value="0">Bilu</option>
+                <option value="1">Novo</option>
+        </select>
+    </section>
+    <section>
+        <p class="preto">Potassio</p>
+    <select id="potassio" onclick="escolhaPrincipal()">
+        <option value="0">Sr. Oinc</option>
+        <option value="1">Maria Posa</option>
+        <option value="2">Novo</option>
+    </select>
+    </section>
 </div>
     <h3></h3>
     <div id="todos-auxiliares">
@@ -72,22 +88,25 @@
             <input type="checkbox" class="listaAuxiliar" id="Wander" checked><img src="assets/Wander.png"> Wanderㅤㅤㅤㅤㅤㅤㅤㅤㅤ
         </div> -->
         <div id="divLee" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Lee" checked><img src="assets/Lee.png" class="grandioso"> Leeㅤㅤㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="listaAuxiliar" id="Lee" checked><img src="assets/Lee.png" class="grandioso"> Leeㅤㅤ
         </div>
         <div id="divRogerio" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Rogerio" checked><img src="assets/Rogerio.png"> Rogérioㅤㅤㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="listaAuxiliar" id="Rogerio" checked><img src="assets/Rogerio.png"> Rogérioㅤㅤ
         </div>
         <div id="divSaniluscus" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Saniluscus" checked><img src="assets/Saniluscus.png"> Saniluscusㅤㅤㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="listaAuxiliar" id="Saniluscus" checked><img src="assets/Saniluscus.png"> Saniluscusㅤㅤ
+        </div>
+        <div id="divNovoArmadillo" class="">
+            <input type="checkbox" class="listaAuxiliar" id="NovoArmadillo" checked><img src="assets/NovoArmadillo.png"> Novoㅤㅤ
         </div>
     </div>
     <div id="auxiliares">
-        <div id="divDenilson" class="">
+        <!-- <div id="divDenilson" class="">
             <input type="checkbox" class="listaAuxiliar" id="Denilson" checked><img src="assets/Denilson.png"> Denilsonㅤㅤㅤㅤㅤㅤㅤㅤㅤ
         </div>
         <div id="divJoaquim" class="">
             <input type="checkbox" class="listaAuxiliar" id="Joaquim" checked><img src="assets/Joaquim.png"> Joaquimㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-        </div>
+        </div> -->
         <!-- <div id="divCapper" class="">
             <input type="checkbox" class="listaAuxiliar" id="Capper" checked><img src="assets/Capper.png"> Capperㅤㅤㅤㅤㅤㅤㅤ
         </div>
@@ -98,40 +117,71 @@
             <input type="checkbox" class="listaAuxiliar" id="Aracnatrix" checked><img src="assets/Aracnatrix.png"> Aracnatrixㅤㅤㅤㅤㅤㅤㅤ
         </div> -->
         <div id="divBruno" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Bruno" checked><img src="assets/Bruno.png"> Brunoㅤㅤㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="listaAuxiliar" id="Bruno" checked><img src="assets/Bruno.png"> Brunoㅤㅤ
         </div>
         <div id="divAltman" class="">
-            <input type="checkbox" class="listaAuxiliar" id="Altman" checked><img src="assets/Altman.png"> Alt-Manㅤㅤㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="listaAuxiliar" id="Altman" checked><img src="assets/Altman.png"> Alt-Manㅤㅤ
+        </div>
+        <div id="divJeremias" class="">
+            <input type="checkbox" class="listaAuxiliar" id="Jeremias" checked><img src="assets/Jeremias.png"> Jeremiasㅤㅤㅤㅤ
         </div>
     </div>
         <div id="auxiliares">
         <div id="divAndromedus" class="">
-            <input type="checkbox" class="lista-preta listaAuxiliar" id="Andromedus" checked><img src="assets/Andromedus.png"> Andrômedusㅤㅤㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="listaAuxiliar" id="Andromedus" checked><img src="assets/Andromedus.png"> Andrômedusㅤㅤ
         </div>
         <div id="divKandoru" class="">
-            <input type="checkbox" class="lista-preta listaAuxiliar" id="Kandoru" checked><img src="assets/Kandoru.png"> Kandoruㅤㅤㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="listaAuxiliar" id="Kandoru" checked><img src="assets/Kandoru.png"> Kandoruㅤㅤ
         </div>
         <div id="divLadrao" class="">
-            <input type="checkbox" class="lista-preta listaAuxiliar" id="Ladrao" checked><img src="assets/Ladrao.png"> Ladrão de Cenourasㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="listaAuxiliar" id="Ladrao" checked><img src="assets/Ladrao.png"> Ladrão de Cenourasㅤㅤ
+        </div>
+        <div id="divNovoJv" class="">
+            <input type="checkbox" class="listaAuxiliar" id="NovoJv" checked><img src="assets/NovoJv.png"> Novoㅤㅤ
         </div>
     </div>
     <div id="auxiliares">
         <div id="divBraid" class="">
-            <input type="checkbox" class="lista-preta listaAuxiliar" id="Braid" checked><img src="assets/Braid.png"> Braidㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Braid" checked><img src="assets/Braid.png"> Braidㅤㅤ
         </div>
-        <div id="divAlexandrino" class="">
+        <!-- <div id="divAlexandrino" class="">
             <input type="checkbox" class="lista-preta listaAuxiliar" id="Alexandrino" checked><img src="assets/Alexandrino.png"> Alexandrinoㅤㅤㅤㅤㅤㅤ
-        </div>
+        </div> -->
         <div id="divKaiba" class="">
-            <input type="checkbox" class="lista-preta listaAuxiliar" id="Kaiba" checked><img src="assets/Kaiba.png"> Kaibaㅤㅤㅤㅤㅤㅤ
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Kaiba" checked><img src="assets/Kaiba.png"> Kaibaㅤㅤ
+        </div>
+        <div id="divKaioleb" class="">
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Kaioleb" checked><img src="assets/Kaioleb.png"> Kaiolebㅤㅤ
         </div>
     </div>
     <div id="auxiliares">
-        <div id="divAlice" class="">
-            <input type="checkbox" class="lista-preta listaAuxiliar" id="Alice" checked><img src="assets/Alice.png"> Alice
+        <div id="divScarbo" class="">
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Scarbo" checked><img src="assets/Scarbo.png"> Scarboㅤㅤ
         </div>
+        <div id="divNovoLuc" class="">
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="NovoLuc" checked><img src="assets/NovoLuc.png"> Novoㅤㅤ
+        </div>
+    </div>
+    <div id="auxiliares">
+        <!-- <div id="divAlice" class="">
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Alice" checked><img src="assets/Alice.png"> Alice
+        </div> -->
         <div id="divBilu" class="">
-            <input type="checkbox" class="lista-preta listaAuxiliar" id="Bilu" checked><img src="assets/Bilu.png"> Bilu
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="Bilu" checked><img src="assets/Bilu.png"> Biluㅤㅤ
+        </div>
+        <div id="divNovoMag" class="">
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="NovoMag" checked><img src="assets/NovoMag.png"> Novoㅤㅤ
+        </div>
+    </div>
+    <div id="auxiliares">
+        <div id="divSrOinc" class="">
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="SrOinc" checked><img src="assets/SrOinc.png"> Sr. Oinc
+        </div>
+        <div id="divMariaPosa" class="">
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="MariaPosa" checked><img src="assets/MariaPosa.png"> Maria Posa
+        </div>
+        <div id="divNovoPotassio" class="">
+            <input type="checkbox" class="lista-preta listaAuxiliar" id="NovoPotassio" checked><img src="assets/NovoPotassio.png"> Novo
         </div>
     </div>
 </div>
