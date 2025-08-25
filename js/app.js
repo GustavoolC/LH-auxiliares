@@ -427,7 +427,7 @@ function definirDanos() {
         if (document.getElementById("Jeremias").checked == true) {
         jeremiasDado = rolagem(20)+0;
         if (jeremiasDado >= dt) {
-            jeremiasDano = rolagem(0);
+            jeremiasDano = 0;
             jeremiasDanoFinal = jeremiasDano - 0;
             if (jeremiasDanoFinal < 0) {
                 jeremiasDanoFinal = 0;
@@ -507,7 +507,7 @@ function definirDanos() {
         if (document.getElementById("NovoJv").checked == true) {
         novojvDado = rolagem(20)+0;
         if (novojvDado >= dt) {
-            novojvDano = rolagem(0);
+            novojvDano = 0;
             novojvDanoFinal = novojvDano - 0;
             if (novojvDanoFinal < 0) {
                 novojvDanoFinal = 0;
