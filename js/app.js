@@ -521,10 +521,8 @@ function definirDanos() {
     }
     if (ivanAuxiliares.includes("Braid") == true) {
         if (document.getElementById("Braid").checked == true) {
-        braidDado = [rolagem(20)+4,rolagem(20)+4,rolagem(20)+4];
-        braidDado.sort((a, b) => a - b);
-        braidDadoFinal = braidDado[0];
-        if (braidDadoFinal >= dt) {
+        braidDado = rolagem(20)+4;
+        if (braidDado >= dt) {
             braidDano = rolagem(12)+rolagem(12);
             braidDanoFinal = braidDano - balistico;
             if (braidDanoFinal < 0) {
@@ -534,7 +532,7 @@ function definirDanos() {
             braidDano = 0;
             braidDanoFinal = 0;
         }
-        listaDanos.push(`<img src="assets/Braid.png" title="Resultado: [` + braidDado + `], Dano: ` + braidDano + ` - ` + balistico + `"> ` + braidDanoFinal);
+        listaDanos.push(`<img src="assets/Braid.png" title="Resultado: ` + braidDado + `, Dano: ` + braidDano + ` - ` + balistico + `"> ` + braidDanoFinal);
     }
     }
     // if (ivanAuxiliares.includes("Alexandrino") == true) {
