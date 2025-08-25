@@ -299,7 +299,7 @@ function definirDanos() {
         if (document.getElementById("NovoArmadillo").checked == true) {
         novoarmadilloDado = rolagem(20)+0;
         if (novoarmadilloDado >= dt) {
-            novoarmadilloDano = rolagem(0);
+            novoarmadilloDano = 0;
             novoarmadilloDanoFinal = novoarmadilloDano - 0;
             if (novoarmadilloDanoFinal < 0) {
                 novoarmadilloDanoFinal = 0;
