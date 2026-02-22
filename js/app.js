@@ -27,13 +27,13 @@ function rolagem(max) {
 }
 
 function somarDanos() {
-    return leeDanoFinal+rogerioDanoFinal+saniluscusDanoFinal+novoarmadilloDanoFinal+brunoDanoFinal+altmanDanoFinal+jeremiasDanoFinal+andromedusDanoFinal+kandoruDanoFinal+ladraoDanoFinal+novojvDanoFinal+braidDanoFinal+kaibaDanoFinal+kaiolebDanoFinal+scarboDanoFinal+novolucDanoFinal+biluDanoFinal+novomagDanoFinal+sroincDanoFinal+mariaposaDanoFinal+novopotassioDanoFinal;
+    return leeDanoFinal+rogerioDanoFinal+saniluscusDanoFinal+novoarmadilloDanoFinal+brunoDanoFinal+altmanDanoFinal+jeremiasDanoFinal+andromedusDanoFinal+kandoruDanoFinal+ladraoDanoFinal+novojvDanoFinal+danteDanoFinal+braidDanoFinal+kaibaDanoFinal+kaiolebDanoFinal+scarboDanoFinal+novolucDanoFinal+biluDanoFinal+novomagDanoFinal+sroincDanoFinal+mariaposaDanoFinal+novopotassioDanoFinal;
 }
 
 function definirAuxiliares() {
     armadilloAuxiliares = ["Lee","Rogerio","Saniluscus","NovoArmadillo"]
     gustavoolAuxiliares = ["Bruno","Altman","Jeremias"];
-    jvictorAuxiliares = ["Andromedus","Kandoru","Ladrao","NovoJv"];
+    jvictorAuxiliares = ["Andromedus","Kandoru","Ladrao","NovoJv","Dante"];
     ivanAuxiliares = ["Braid","Kaiba","Kaioleb"];
     lucAuxiliares = ["Scarbo","NovoLuc"];
     magAuxiliares = ["Bilu","NovoMag"];
@@ -151,6 +151,11 @@ function gerarLista() {
         document.getElementById("divNovoJv").setAttribute("class","branco");
     } else {
         document.getElementById("divNovoJv").setAttribute("class","secreto");
+    }
+    if (jvictorAuxiliares.includes("Dante") == true) {
+        document.getElementById("divDante").setAttribute("class","branco");
+    } else {
+        document.getElementById("divDante").setAttribute("class","secreto");
     }
     if (ivanAuxiliares.includes("Braid") == true) {
         document.getElementById("divBraid").setAttribute("class","preto");
@@ -441,26 +446,20 @@ function definirDanos() {
     }
     if (jvictorAuxiliares.includes("Andromedus") == true) {
         if (document.getElementById("Andromedus").checked == true) {
-        andromedusDado = rolagem(20)+8;
+        andromedusDado = rolagem(20)+11;
         if (andromedusDado >= dt) {
-            andromedusDano = rolagem(12)+rolagem(12)+2+3;
-            andromedusDanoDefendido = andromedusDano - corte;
+            andromedusDano = rolagem(12)+rolagem(12)+rolagem(12);
+            andromedusDanoDefendido = andromedusDano - luz;
             if (andromedusDanoDefendido < 0) {
                 andromedusDanoDefendido = 0;
             }
-            andromedusDanoLuz = rolagem(6);
-            andromedusDanoLuzDefendido = andromedusDanoLuz - luz;
-            if (andromedusDanoLuzDefendido < 0) {
-                andromedusDanoLuzDefendido = 0;
-            }
-            andromedusDanoFinal = andromedusDanoDefendido + andromedusDanoLuzDefendido;
+            andromedusDanoFinal = andromedusDanoDefendido;
         } else {
             andromedusDano = 0;
-            andromedusDanoLuz = 0;
-            andromedusDanoLuzDefendido = 0;
+            andromedusDanoDefendido = 0;
             andromedusDanoFinal = 0;
         }
-        listaDanos.push(`<img src="assets/Andromedus.png" title="Resultado: ` + andromedusDado + `, Dano: (` + andromedusDano + ` - ` + corte + `) + (` + andromedusDanoLuz + ` - ` + luz + `)"> ` + andromedusDanoFinal);
+        listaDanos.push(`<img src="assets/Andromedus.png" title="Resultado: ` + andromedusDado + `, Dano: ` + andromedusDano + ` - ` + luz + `"> ` + andromedusDanoFinal);
     }
     }
     if (jvictorAuxiliares.includes("Kandoru") == true) {
@@ -517,6 +516,22 @@ function definirDanos() {
             novojvDanoFinal = 0;
         }
         listaDanos.push(`<img src="assets/NovoJv.png" title="Resultado: ` + novojvDado + `, Dano: ` + novojvDano + ` - ` + 0 + `"> ` + novojvDanoFinal);
+    }
+    }
+    if (jvictorAuxiliares.includes("Dante") == true) {
+        if (document.getElementById("Dante").checked == true) {
+        danteDado = rolagem(20)+15;
+        if (danteDado >= dt) {
+            danteDano = rolagem(12)+rolagem(12)+rolagem(12);
+            danteDanoFinal = danteDano - quimico;
+            if (danteDanoFinal < 0) {
+                danteDanoFinal = 0;
+            }
+        } else {
+            danteDano = 0;
+            danteDanoFinal = 0;
+        }
+        listaDanos.push(`<img src="assets/Dante.png" title="Resultado: ` + danteDado + `, Dano: ` + danteDano + ` - ` + quimico + `"> ` + danteDanoFinal);
     }
     }
     if (ivanAuxiliares.includes("Braid") == true) {
@@ -788,6 +803,8 @@ function resetarDanos() {
     ladraoDanoFinal = 0;
     novojvDano = 0;
     novojvDanoFinal = 0;
+    danteDano = 0;
+    danteDanoFinal = 0;
     braidDano = 0;
     braidDanoFinal = 0;
     // alexandrinoDano = 0;
